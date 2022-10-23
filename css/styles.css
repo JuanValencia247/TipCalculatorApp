@@ -1,0 +1,242 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: hsl(189deg, 41%, 97%);
+  font-size: 24px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.header__title {
+  text-align: center;
+  color: hsl(186deg, 14%, 43%);
+  font-size: 1em;
+  margin: 30px 0;
+  letter-spacing: 8px;
+}
+
+.main .section-container {
+  background-color: hsl(0deg, 0%, 100%);
+  width: 375px;
+  border-radius: 15px;
+  padding: 32px;
+}
+.main .section-container__value-label {
+  display: block;
+  color: hsl(186deg, 14%, 43%);
+  font-size: 0.75em;
+  margin-bottom: 10px;
+}
+.main .section-container__value-input {
+  width: 100%;
+  height: 50px;
+  font-family: "Space Mono", monospace;
+  font-size: 1em;
+  text-align: right;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  caret-color: hsl(172deg, 67%, 45%);
+  margin-bottom: 30px;
+  background-image: url("../images/icon-dollar.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-color: hsl(189deg, 41%, 97%);
+}
+.main .section-container__value-input:hover {
+  cursor: pointer;
+}
+.main .section-container__value-input:focus {
+  outline: none;
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+.main .section-container__value-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.main .section-container__value-buttons {
+  border: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.main .section-container__value-buttons-legend {
+  display: block;
+  color: hsl(186deg, 14%, 43%);
+  font-size: 0.75em;
+  margin-bottom: 10px;
+}
+.main .section-container .selected {
+  background-color: hsl(172deg, 67%, 45%);
+  color: hsl(183deg, 100%, 15%);
+}
+.main .section-container__value-buttons-btn {
+  width: 147px;
+  height: 50px;
+  background-color: hsl(183deg, 100%, 15%);
+  color: hsl(189deg, 41%, 97%);
+  font-family: "Space Mono", monospace;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+}
+.main .section-container__value-buttons-btn:hover {
+  cursor: pointer;
+}
+.main .section-container__value-buttons-custom {
+  width: 100%;
+  height: 50px;
+  font-family: "Space Mono", monospace;
+  font-size: 1em;
+  text-align: right;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  caret-color: hsl(172deg, 67%, 45%);
+  margin-bottom: 30px;
+  background-image: url(unset);
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-color: hsl(189deg, 41%, 97%);
+  text-align: center;
+  color: hsl(186deg, 14%, 43%);
+}
+.main .section-container__value-buttons-custom:hover {
+  cursor: pointer;
+}
+.main .section-container__value-buttons-custom:focus {
+  outline: none;
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+.main .section-container__value-buttons-custom::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.main .section-container__value-people-label {
+  display: block;
+  color: hsl(186deg, 14%, 43%);
+  font-size: 0.75em;
+  margin-bottom: 10px;
+}
+.main .section-container__value-people-input {
+  width: 100%;
+  height: 50px;
+  font-family: "Space Mono", monospace;
+  font-size: 1em;
+  text-align: right;
+  border-radius: 5px;
+  padding: 10px;
+  border: none;
+  caret-color: hsl(172deg, 67%, 45%);
+  margin-bottom: 30px;
+  background-image: url("../images/icon-person.svg");
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-color: hsl(189deg, 41%, 97%);
+}
+.main .section-container__value-people-input:hover {
+  cursor: pointer;
+}
+.main .section-container__value-people-input:focus {
+  outline: none;
+  border: 2px solid hsl(172deg, 67%, 45%);
+}
+.main .section-container__value-people-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.main .section-container__value-people-label .error {
+  color: red;
+}
+.main .section-container__value-people-label .error::after {
+  content: "Can´t be zero";
+  font-size: 0.7em;
+}
+.main .section-container__results {
+  background-color: hsl(183deg, 100%, 15%);
+  border-radius: 12px;
+  padding: 42px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .section-container__results-res {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 20px;
+  gap: 20px;
+}
+.main .section-container__results-content1-amount, .main .section-container__results-content2-total {
+  font-size: 0.75em;
+  color: hsl(189deg, 41%, 97%);
+}
+.main .section-container__results-content1-person, .main .section-container__results-content2-person {
+  font-size: 0.65em;
+  color: hsl(185deg, 41%, 84%);
+}
+.main .section-container__results-content1-tip-value, .main .section-container__results-content2-total-value {
+  font-size: 1.2em;
+  color: hsl(172deg, 67%, 45%);
+  text-align: right;
+}
+.main .section-container__results-btn {
+  background-color: hsl(172deg, 67%, 45%);
+  height: 50px;
+  color: hsl(183deg, 100%, 15%);
+  text-transform: uppercase;
+  font-size: 1em;
+  font-family: "Space Mono", monospace;
+  border: none;
+  border-radius: 5px;
+}
+.main .section-container__results-btn:hover {
+  cursor: pointer;
+  background-color: hsl(185deg, 41%, 84%);
+}
+
+@media (min-width: 1440px) {
+  .header__title {
+    margin: 160px 0 90px;
+  }
+  .main .section-container {
+    width: 900px;
+    display: flex;
+    gap: 50px;
+  }
+  .main .section-container__value {
+    flex: 1;
+  }
+  .main .section-container__results {
+    flex: 1;
+  }
+  .main .section-container__value-buttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .main .section-container__value-buttons-btn {
+    width: 120px;
+  }
+  .main .section-container__results-content1-tip-value, .main .section-container__results-content2-total-value {
+    font-size: 2em;
+  }
+  .main .section-container__results-content2-total-value {
+    font-size: 2em;
+  }
+}
+.attribution {
+  font-size: 14px;
+  text-align: center;
+  margin: 20px;
+}
+
+.attribution a {
+  color: hsl(228deg, 45%, 44%);
+}
+
+/*# sourceMappingURL=styles.css.map */

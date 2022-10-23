@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+</head>
+<body>
+
+  <header class="header">
+    <h1 class="header__title">SPLI <br> TTER</h1>
+  </header>
+
+  <main class="main">
+    <section class="section-container">
+      <div class="section-container__value">
+        <label class="section-container__value-label" for="bill">Bill</label>
+        <input id="bill" class="section-container__value-input" type="number" value="142.55">
+
+        <fieldset class="section-container__value-buttons">
+          <legend class="section-container__value-buttons-legend ">Select Tip %</legend>
+          <button class="section-container__value-buttons-btn selected">5%</button>
+          <button class="section-container__value-buttons-btn">10%</button>
+          <button class="section-container__value-buttons-btn">15%</button>
+          <button class="section-container__value-buttons-btn">25%</button>
+          <button class="section-container__value-buttons-btn">50%</button>
+          <input class="section-container__value-buttons-custom" type="number" placeholder="Custom">
+
+        </fieldset>
+
+        <label class="section-container__value-people-label" for="people">Number of People <span id="alert"></span></label>
+        <input id="people" class="section-container__value-people-input " min="1" type="number" value="5">
+
+      </div>
+
+      <div class="section-container__results">
+        <div class="section-container__results-res">
+          <div class="section-container__results-content1">
+            <p class="section-container__results-content1-amount">Tip Amount</p>
+            <p class="section-container__results-content1-person">/ person</p>
+          </div>
+
+          <p class="section-container__results-content1-tip-value">0</p>
+
+          <div class="section-container__results-content2">
+            <p class="section-container__results-content2-total">Total</p>
+            <p class="section-container__results-content2-person">/ person</p>
+          </div>
+
+          <p class="section-container__results-content2-total-value">0</p>
+        </div>
+        
+        <button class="section-container__results-btn">Reset</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/JuanValencia247" target="_blank">JC</a>.
+  </footer>
+
+  <script src="./js/main.js"></script>
+</body>
+</html>

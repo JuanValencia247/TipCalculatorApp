@@ -1,0 +1,39 @@
+@use 'variables' as v;
+
+@mixin label {
+    display: block;
+         color: v.$Dark-grayish-cyan;
+         font-size: .75em;
+         margin-bottom: 10px;
+}
+
+@mixin input ($icon: unset) {
+    width: 100%;
+    height: 50px;
+    font-family: v.$Font;
+    font-size: 1em;
+    text-align: right;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    caret-color: v.$Strong-cyan;
+    margin-bottom: 30px;
+    &:hover{
+        cursor: pointer;
+    }
+    &:focus{
+        outline: none;
+        border: 2px solid v.$Strong-cyan;
+    }
+    &::-webkit-inner-spin-button{
+        -webkit-appearance: none;
+    }
+    background: {
+        image: url($icon);
+        repeat: no-repeat;
+        position: 10px center;
+        color: v.$Very-light-grayish-cyan;
+    };
+   
+   
+}
